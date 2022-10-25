@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class RunBloodData {
+          
+    public RunBloodData() {
+    }
+    
+    public static void main(String[] args) {
+    	Scanner input = new Scanner(System.in);
+    	
+    	System.out.print("Enter blood type of patient: ");
+    	String name = input.nextLine();
+    	
+    	System.out.print("Enter the Rhesus factor (+ or -): ");
+    	String factor = input.nextLine();
+    	
+    	if(name.equals("") && (factor.equals(""))){
+    		BloodData bd = new BloodData();
+    				
+    		}
+    		else if (name.isEmpty() && factor.equals("+") && factor.equals("-"))
+    			{
+    				System.out.println("Wrong Input");
+    				}
+    				else if (name.equalsIgnoreCase("O") || name.equalsIgnoreCase("A") || name.equalsIgnoreCase("B") || name.equalsIgnoreCase("AB") && factor.equals("+") || factor.equals("-")){
+    					BloodData bd2 = new BloodData(name,factor);
+    					}
+    					else{
+    						System.out.println("Wrong Input");}			  
+    }
+}
